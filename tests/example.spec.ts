@@ -22,9 +22,12 @@ test('get started link', async ({ page }) => {
 test('loads from CSV', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
+  // This relies on two extra libraries: axios and csv-parse
+
   // fetch CSV from URL with axios
   const response = await axios.get("https://github.com/glitchassassin/playwright-csv-demo/raw/main/sources.csv");
 
+  // parse CSV with csv-parse
   // automatically checks for headers in the first row - if the first row doesn't
   // contain headers, set "columns: false"
   const records = parse(response.data, { columns: true, skip_empty_lines: true });
