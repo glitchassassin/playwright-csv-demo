@@ -11,6 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.41.1",
-    "@types/node": "^20.11.11"
+    "@types/node": "^20.11.11",
+    "axios": "^1.6.7",
+    "csv": "^6.3.6"
   }
 }
